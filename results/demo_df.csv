@@ -1,0 +1,4 @@
+Condition,Prediction,DR score,Blur score,Brightness,Contrast,Review required,Flags
+Original,No DR,0.1325,20.44,54.71,58.43,False,
+Strong blur,No DR,0.1158,0.57,54.7,57.85,True,Low edge detail
+Darkened,No DR,0.2121,3.39,19.14,20.44,True,"Low edge detail, Low brightness, Low contrast"
