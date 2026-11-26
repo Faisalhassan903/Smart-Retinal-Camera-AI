@@ -1,0 +1,19 @@
+metric,controlled_minus_original,lower_95,upper_95,resamples,method,seed,common_images,common_groups
+accuracy,-0.0117647058823529,-0.03529411764705881,0.0,2000,paired stratified confirmed-group bootstrap percentile,11,85,85
+sensitivity,-0.023255813953488413,-0.06976744186046513,0.0,2000,paired stratified confirmed-group bootstrap percentile,11,85,85
+specificity,0.0,0.0,0.0,2000,paired stratified confirmed-group bootstrap percentile,11,85,85
+precision,-0.0011614401858304202,-0.005411255411255422,0.0,2000,paired stratified confirmed-group bootstrap percentile,11,85,85
+f1,-0.012605042016806678,-0.03975903614457832,0.0,2000,paired stratified confirmed-group bootstrap percentile,11,85,85
+roc_auc,0.0,-1.1102230246251565e-16,1.1102230246251565e-16,2000,paired stratified confirmed-group bootstrap percentile,11,85,85
+accuracy,-0.02352941176470591,-0.05882352941176472,0.0,2000,paired stratified confirmed-group bootstrap percentile,23,85,85
+sensitivity,-0.046511627906976716,-0.11627906976744184,0.0,2000,paired stratified confirmed-group bootstrap percentile,23,85,85
+specificity,0.0,0.0,0.0,2000,paired stratified confirmed-group bootstrap percentile,23,85,85
+precision,-0.0023809523809523725,-0.009179926560587526,0.0,2000,paired stratified confirmed-group bootstrap percentile,23,85,85
+f1,-0.025513819985825692,-0.0678157406367716,0.0,2000,paired stratified confirmed-group bootstrap percentile,23,85,85
+roc_auc,-0.00221483942414169,-0.008305647840531671,0.002768549280177224,2000,paired stratified confirmed-group bootstrap percentile,23,85,85
+accuracy,0.01176470588235301,-0.02352941176470591,0.04705882352941182,2000,paired stratified confirmed-group bootstrap percentile,37,85,85
+sensitivity,-0.023255813953488413,-0.06976744186046513,0.0,2000,paired stratified confirmed-group bootstrap percentile,37,85,85
+specificity,0.04761904761904756,0.0,0.11904761904761907,2000,paired stratified confirmed-group bootstrap percentile,37,85,85
+precision,0.04212860310421285,-0.0022688598979013763,0.10075351588143208,2000,paired stratified confirmed-group bootstrap percentile,37,85,85
+f1,0.009031198686371145,-0.02706439393939388,0.04329004329004327,2000,paired stratified confirmed-group bootstrap percentile,37,85,85
+roc_auc,-0.002768549280177224,-0.009966777408637828,0.0011074197120709561,2000,paired stratified confirmed-group bootstrap percentile,37,85,85

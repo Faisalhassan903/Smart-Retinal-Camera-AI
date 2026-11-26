@@ -1,0 +1,4 @@
+images,flagged_images,flagged_pct,classification_errors,errors_captured,errors_captured_pct,false_negatives,false_negatives_captured,false_negatives_captured_pct,unflagged_images,residual_errors,residual_error_pct,residual_false_negatives,seed
+550,206,37.45454545454546,30,13,43.333333333333336,23,10,43.47826086956522,344,17,4.941860465116279,13,11
+550,207,37.63636363636363,36,18,50.0,30,16,53.333333333333336,343,18,5.247813411078718,14,23
+550,207,37.63636363636363,30,13,43.333333333333336,24,11,45.833333333333336,343,17,4.956268221574344,13,37

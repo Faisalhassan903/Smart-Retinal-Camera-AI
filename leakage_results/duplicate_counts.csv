@@ -1,0 +1,12 @@
+measure,value
+images,3662
+exact_content_groups,3534
+groups_with_multiple_images,123
+images_in_multiple_image_groups,251
+grade_discordant_groups,30
+binary_discordant_groups,4
+original_cross_partition_exact_groups,64
+visually_verified_near_pairs,6
+total_split_groups,3528
+original_test_overlap,89
+patient_level_separation_verified,False

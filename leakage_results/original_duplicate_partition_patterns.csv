@@ -1,0 +1,6 @@
+partition_pattern,groups
+train,57
+test+train,30
+train+val,29
+test+val,5
+val,2
