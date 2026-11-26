@@ -14,3 +14,11 @@ test_images/
 __pycache__/
 .venv/
 .DS_Store
+
+!notebooks/full_research_code.ipynb
+private_archive/
+data/
+runs/
+.pytest_cache/
+.streamlit/secrets.toml
+work/

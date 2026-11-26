@@ -4,6 +4,21 @@ Research prototype prepared for PhD discussion. **Not clinically validated; not 
 
 ![Held-out test confusion matrix](figures/test_confusion_matrix.png)
 
+## Full code, training and Streamlit
+
+The complete historical Colab source is now in [notebooks/full_research_code.ipynb](notebooks/full_research_code.ipynb). All 58 cells, including 40 code cells, are preserved; only outputs and metadata were removed from this shareable copy. It still contains Colab-specific paths and historical setup cells. It is an archive, not the new portable training entry point.
+
+The downloaded notebook with its original saved outputs is kept locally at `private_archive/Smart_Retinal_Camera_AI_documented.ipynb`, alongside private provenance. This folder, checkpoint weights, manifests, datasets and new run outputs are excluded from Git. Use [LOCAL_WORKFLOW.md](LOCAL_WORKFLOW.md) for setup, new training runs, evaluation and the Streamlit interface.
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-local.txt
+streamlit run app.py
+```
+
+The UI loads the preserved `models/resnet18_epoch1.pth` when available and discovers new `runs/*/best.pth` checkpoints. It supports image upload, a fixed-threshold experimental prediction, quality flags, positive-class Grad-CAM and JSON export. Historical metrics are labelled separately from the selected model's output. The complete APTOS image dataset is not included in this repository or the private backup.
+
 ## Evidence
 APTOS 2019: 3,662 labelled photographs; binary grade 0 versus any DR. Image-level train/validation/test counts: 2,563/549/550. One completed epoch. Test accuracy 94.00%, sensitivity 92.83%, specificity 95.20%, AUC 0.9754, F1 0.9401. TN/FP/FN/TP = 258/13/20/259. See RESEARCH_REPORT.md for methods, validation-only blur results and limitations.
 
