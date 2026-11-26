@@ -19,6 +19,8 @@ streamlit run app.py
 
 The UI loads the preserved `models/resnet18_epoch1.pth` when available and discovers new `runs/*/best.pth` checkpoints. It supports image upload, a fixed-threshold experimental prediction, quality flags, positive-class Grad-CAM and JSON export. Historical metrics are labelled separately from the selected model's output. The complete APTOS image dataset is not included in this repository or the private backup.
 
+For the retrospective publication analyses, see [PUBLICATION_EXPERIMENTS.md](PUBLICATION_EXPERIMENTS.md), the [aggregate tables and figures](publication_results/README.md), and the runnable [Colab notebook](notebooks/publication_colab.ipynb). The experiment script verifies the original split manifests, screens cross-partition image duplicates, reruns the preserved checkpoint, computes 2,000-resample intervals and grade results, evaluates fixed degradations, and measures review-flag coverage. It writes per-image outputs only to ignored private run directories. The report distinguishes completed analyses from optional retraining and unresolved leakage risks.
+
 ## Evidence
 APTOS 2019: 3,662 labelled photographs; binary grade 0 versus any DR. Image-level train/validation/test counts: 2,563/549/550. One completed epoch. Test accuracy 94.00%, sensitivity 92.83%, specificity 95.20%, AUC 0.9754, F1 0.9401. TN/FP/FN/TP = 258/13/20/259. See RESEARCH_REPORT.md for methods, validation-only blur results and limitations.
 

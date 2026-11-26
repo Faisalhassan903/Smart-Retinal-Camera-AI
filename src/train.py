@@ -4,6 +4,7 @@ import json
 import os
 import random
 import sys
+import time
 from datetime import datetime, timezone
 from importlib.metadata import version
 from pathlib import Path
@@ -149,7 +150,9 @@ def main():
     model.to(device)
     optimizer = torch.optim.Adam((p for p in model.parameters() if p.requires_grad), lr=args.lr)
     history, best = [], float('inf')
+    run_started = time.perf_counter()
     for epoch in range(1, args.epochs + 1):
+        epoch_started = time.perf_counter()
         if args.fine_tune:
             model.train()
         else:
@@ -163,6 +166,7 @@ def main():
             loss_sum += loss.item() * len(y); count += len(y)
         val_loss, targets, scores = evaluate(model, val_loader, device)
         row = {'epoch': epoch, 'training_loss': loss_sum / count, 'validation_loss': val_loss,
+               'epoch_seconds': time.perf_counter() - epoch_started,
                **{'val_' + k: v for k, v in metrics(targets, scores).items()}}
         history.append(row)
         pd.DataFrame(history).to_csv(run / 'history.csv', index=False)
@@ -172,6 +176,7 @@ def main():
             config['best_epoch'] = epoch
         print(json.dumps(row), flush=True)
     config['checkpoint_sha256'] = sha256(run / 'best.pth')
+    config['total_training_seconds'] = time.perf_counter() - run_started
     (run / 'config.json').write_text(json.dumps(config, indent=2))
     print(f'Completed: {run}\nTest set not evaluated. Use python -m src.evaluate after model selection is final.')
 

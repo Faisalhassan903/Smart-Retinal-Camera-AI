@@ -16,6 +16,7 @@ __pycache__/
 .DS_Store
 
 !notebooks/full_research_code.ipynb
+!notebooks/publication_colab.ipynb
 private_archive/
 data/
 runs/
